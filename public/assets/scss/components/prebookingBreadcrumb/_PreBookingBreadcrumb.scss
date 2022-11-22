@@ -1,0 +1,33 @@
+.breadcrumb-wrapper{
+    background-image: url('/assets/images/units-bg.png');
+    background-position: center;
+    background-size: contain;
+    .breadcrumb-div{
+        .section{
+            position: relative;
+            padding-right: 3.5rem !important;
+            &::before{
+                content: "";
+                position: absolute;
+                background-color: #7e7e7e !important;
+                width: 3rem;
+                height: 1px;
+                right: 0rem;
+                top: 1rem;
+            }
+            &:last-child{
+                &::before{
+                    display: none;
+                }
+            }
+            .breadcrumb-item{
+                font-size: 0.8rem;
+                border-radius: 50%;
+                height: 2rem;
+                width: 2rem;
+                display: inline-block;
+                line-height: 2rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+.navtext.active{
+    color: $primaryColor !important;
+    border-color: $primaryColor !important;
+    border-bottom-width: 4px !important;
+}
+
+span{
+    .ui.floating.dropdown{
+        .divider.text{
+            img{
+                width: 2rem !important;
+                height: 2rem !important;
+                object-fit: contain !important;
+            }
+        }
+        .menu{
+            min-width: max-content !important;
+            background-color: $textLightColor !important;
+            border-radius: 1px !important;
+            .item{
+                img{
+                    width: 2rem !important;
+                height: 2rem !important;
+                object-fit: contain !important;
+                }
+            }
+            .item.active{
+                border-bottom: none !important;
+            }
+        }
+    }
+}
+.logo{
+    height: 2rem !important;
+    width: 5rem !important;
+    object-fit: contain !important;
+}

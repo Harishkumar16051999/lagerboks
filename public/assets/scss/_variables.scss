@@ -1,0 +1,72 @@
+$primaryColor: #00aeef;
+$primaryLightColor: #97E2FF;
+$secondaryColor: #393b39;
+$textLightColor: #ffffff;
+$textDarkColor: #000000;
+$textDisabledColor: #9B9B9B;
+$layoutBackground: #F9F9F9;
+$placeholder: #484848;
+$rentNowCard: #E8F3E7;
+$rentNowCard-boxShadow: 0px 20px 10px #0000000D;
+$LoginFormBackground: #F3F7F3;
+$LoginFormTextColor: #00aeef;
+$LoginFormBorderColor: #BFBFBF;
+$LoginFormBoxShadow: 0px 0px 6px #00000029;
+$UnitsDropdownBg: #00aeef;
+$UnitsFilterBg: #FBFEFF;
+$UnitsCardBg: #E6E6E6;
+$UnitsCardBoxshadow: 0px 20px 40px #0000000D;
+$UnitsCardsLeft: #002291;
+$UnitsCardsDesc: #B5B3B3;
+$Error: #FF0000;
+$CounterBg: #555555;
+$AddonCardBoxShadow: 0px 0px 10px #0000000D;
+$AddonUpload: rgba(34,36,38,.15);
+$ForgotAlertBg: #DFF6DD;
+$RangeSliderBg: #eeeeee;
+$RangeSlider: #67be5c99;
+$EsignCardBg: #F7F7F7;
+$TextPurple: #40095D;
+$TextSecondary: #686868;
+$EsignViewBg: #1CB0E80A;
+$ErrorLight: #FF4444;
+$lightGray:#dedede7a ;
+$border-Success-1:#4ac33b; 
+$PaymentTabBg: #F2F3F2;
+$PrimaryCardTextColor: #C0C3CE;
+$LabelSuccessBg: #F1FFEF;
+$LabelDangerBg: #FFEFEF;
+$PaymentAlertBg: #34C28D;
+$PaymentTableBg: #BBBBBB;
+$PaymentTabletdColor: #78BCFF;
+$UnitsFilterSelectedText: #DCDCDC;
+$primary-scheme-Light: $primaryColor, $textLightColor;
+$primary-scheme-Dark: $primaryColor, $textDarkColor;
+$secondary-scheme-Light: $secondaryColor, $textLightColor;
+$secondary-scheme-Dark: $secondaryColor, $textDarkColor;
+
+$secondary-scheme-active: $secondaryColor, $primaryColor;
+$secondary-scheme-inActive: $secondaryColor, $textLightColor;
+
+$sidebar-boxShadow: 0px 20px 40px #0000000d;
+
+$border-radius: 16px;
+
+$grid-columns: 12;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+);

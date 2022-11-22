@@ -1,0 +1,145 @@
+.units-wrapper{
+    .units-banner{
+        img{
+            height: 14rem;
+        }
+        .units-top-content{
+            width: 45%;
+            bottom: -2rem !important;
+            @include for-tablet{
+                width: 60%;
+            }
+            @include for-mobile{
+                width: 90%;
+            }
+            .dropdown-div{
+                .ui.fluid.dropdown{
+                    width: 90% !important;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+    .units-row-div{
+        .filters-div{
+            .accordion{
+                border: 2px solid $primaryLightColor !important;
+                border-radius: 11px;
+                .content{
+                    background-color: $UnitsFilterBg !important;
+                    div{
+                        a{
+                            font-size: .7rem;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+        .units-container-div{
+            .sort-div{
+                h4{
+                    .dropdown{
+                        .menu{
+                            left: auto;
+                            right: 0;
+                            border-radius: 0 !important;
+                        }
+                        .divider{
+                            font-size: 1rem;
+                            font-weight: 400 !important;
+                            padding-left: 0.4rem;
+                        }
+                    }
+                }
+            }
+            .units-card{
+                .row{
+                    @include for-desktop{
+                        align-items: unset !important;
+                    }
+                }
+                .units-card-img{
+                    background-color: $UnitsCardBg;
+                    border-radius: 10px 0 0 10px;
+                    @include for-tablet{
+                        border-radius: 10px 10px 0 0;
+                    }
+                }
+                .view-img{
+                    img{
+                        width: 1rem;
+                        height: 1rem;
+                    }
+                }
+                .units-card-desc{
+                    .units-amenitiy{
+                        div{
+                            background-color: $lightGray;
+                            padding: 0.4rem 0.5rem;
+                            margin: 0.5rem 0.5rem 0 0;
+                        }
+                    }
+                }
+                .units-card-amt{
+                    position: relative;
+                    @include for-tablet{
+                        text-align: left !important;
+                    }
+                    @include for-mobile{
+                        text-align: left !important;
+                    }
+                    div{
+                        @include for-mobile{
+                            justify-content: start !important;
+                        }
+                    }
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        height: 6rem;
+                        width: 1px;
+                        background-color: $UnitsCardBg;
+                        @include for-tablet{
+                            display: none;
+                        }
+                    }
+                    img{
+                        width: 1rem;
+                        height: 1rem;
+                        object-fit: contain;
+                    }
+                }
+                .units-card-actions{
+                    button{
+                        padding: 0.5rem 1rem !important;
+                        @include for-mobile{
+                            justify-content: center !important;
+                        }
+                        img{
+                            width: 1rem;
+                            height: 1rem;
+                        }
+                        span{
+                            font-size: .9rem !important;
+                            margin-left: 0.4rem;
+                            font-weight: 400;
+                        }
+                    }
+                }
+                .more-info{
+                    .accordion{
+                        margin-top: -1.8rem;
+                        @include for-tablet{
+                            margin-top: 0rem;
+                        }
+                        .content{
+                            border-top: 1px solid $UnitsCardBg;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
