@@ -1,17 +1,25 @@
 import React, { useState } from 'react'
-import {  Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import PreBookingBreadcrumb from "../components/prebooking breadcrumb/PreBookingBreadcrumb"
 import { Dropdown, Checkbox, Input, Modal, Image } from 'semantic-ui-react';
 import SemanticDatepicker from 'react-semantic-ui-datepickers';
 import countriecodes from "../components/CountryCode";
 
 const TenantDetails = () => {
+    const navigate = useNavigate();
+    const signandpayment = (e) => {
+        e.preventDefault()
+        navigate('/SignandPayment');
+    }
     const [applyDiscountModal, SetApplyDiscountModal] = useState({
         open: false,
         dimmer: undefined,
     })
-    const [creditStatus, SetCreditStatus] = useState(false);
     const [creditCheckModal, SetCreditCheckModal] = useState({
+        open: false,
+        dimmer: undefined,
+    })
+    const [creditScoreModal, SetCreditScoreModal] = useState({
         open: false,
         dimmer: undefined,
     })
@@ -19,6 +27,7 @@ const TenantDetails = () => {
     const alreadyUserHandler = () => {
         setAlreadyUser(true);
     }
+    const [creditStatus, SetCreditStatus] = useState(false);
     const proceedCreditCheck = (e) => {
         e.preventDefault();
         SetCreditStatus(true);
@@ -177,12 +186,12 @@ const TenantDetails = () => {
                                 </div>
                                 <div class="d-flex mb-4 justify-content-between flex-wrap bg-primary-light p-1 border-success-dark-1 border-radius-5">
                                     <p class="d-flex align-items-center">
-                                        <img src="/assets/images/credit-score.svg" alt="Esign" /><span class="ml-1">Great! You have successfully signed the documents</span>
+                                        <img src="/assets/images/credit-score.svg" alt="Esign" /><span class="ml-1">Great! Your credit score has been checked successfully</span>
                                     </p>
-                                    <button class="ui button text-success-dark p-1 bg-white card-border fs-7 fw-400 text-dark px-1 mr-2 mt-md-1">View Document</button>
+                                    <button onClick={() => SetCreditScoreModal({ open: true, dimmer: 'blurring' })} class="ui button border-success-dark-1 text-success-dark p-1 bg-white fs-7 fw-400 text-dark px-2 px-sm-1 mr-2 mt-md-1">View Score</button>
                                 </div>
                                 <div class="text-center my-2">
-                                    <button class="ui button bg-white border-success-dark-light-1 text-dark fs-7 fw-400 px-5 mx-1 mb-1 mb-sm-1 px-sm-2">BACK</button>
+                                    <button onClick={() => navigate('/order')} class="ui button bg-white border-success-dark-light-1 text-dark fs-7 fw-400 px-5 mx-1 mb-1 mb-sm-1 px-sm-2">BACK</button>
                                     <button onClick={() => SetCreditCheckModal({ open: true, dimmer: 'blurring' })} class="ui button bg-success-dark text-white fs-7 fw-400 px-5 mx-1 mb-1 mb-sm-1 px-sm-3">NEXT</button>
                                 </div>
                             </div>}
@@ -323,7 +332,7 @@ const TenantDetails = () => {
                     <Modal.Header className='header text-success-dark text-center fw-601 fs-5 border-0 pb-1'>CREDIT CHECK</Modal.Header>
                     <Modal.Content className='mh-400 overflow-y-auto text-center pt-2'>
                         <div className="d-flex justify-content-center mb-2">
-                            <Image width='250' src={!creditStatus ? `/assets/images/creditCheck.svg` : '/assets/images/creditStatusExcellent.png'} alt='CreditCheck' />
+                            <Image width='250' src={!creditStatus ? `/assets/images/AAA-Check.png` : '/assets/images/AA.png'} alt='CreditCheck' />
                         </div>
                         {!creditStatus &&
                             <>
@@ -341,10 +350,37 @@ const TenantDetails = () => {
                                 Congratulations! You have sufficient credit score to proceed further with us
                             </div>
                             <div>
-                                <button className="ui button bg-secondary  fs-7 fw-400 text-white px-5">Continue</button>
+                                <button onClick={signandpayment} className="ui button bg-secondary  fs-7 fw-400 text-white px-5">Continue</button>
                             </div>
                         </>
                         }
+                    </Modal.Content>
+                </Modal>
+                <Modal
+                    dimmer={creditScoreModal.dimmer}
+                    open={creditScoreModal.open}
+                    size='tiny'
+                    onClose={() => SetCreditScoreModal({ open: false })}
+                >
+                    <Modal.Header className='header text-success-dark text-center fw-601 fs-5 border-0 pb-1 position-relative'>CREDIT SCORE CHECK
+                        <svg onClick={() => SetCreditScoreModal({ open: false })} className='r-3 cursor-pointer position-absolute' xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 17.473 17.47">
+                            <path id="wrong-5" d="M978.609-438.353l-2.052-2.043-4.37-4.366a1.33,1.33,0,0,1-.4-1.425,1.3,1.3,0,0,1,.833-.843,1.3,1.3,0,0,1,1.171.183,3.019,3.019,0,0,1,.353.321q3.009,3,6.009,6.01c.088.088.159.193.254.309.127-.118.217-.2.3-.281l6.156-6.156a1.332,1.332,0,0,1,1.325-.431,1.3,1.3,0,0,1,.927.828,1.3,1.3,0,0,1-.188,1.228,3.412,3.412,0,0,1-.325.35q-3,3.009-6.011,6.009a3.233,3.233,0,0,1-.317.244c.132.14.213.23.3.316q3.052,3.053,6.108,6.1a1.36,1.36,0,0,1,.441,1.387,1.305,1.305,0,0,1-2.205.564c-.59-.568-1.163-1.157-1.74-1.736l-4.487-4.491a2.068,2.068,0,0,1-.183-.248l-.142-.051a1.52,1.52,0,0,1-.191.325q-3.047,3.059-6.1,6.111a1.341,1.341,0,0,1-1.45.419,1.3,1.3,0,0,1-.851-.866,1.3,1.3,0,0,1,.235-1.19,3.215,3.215,0,0,1,.257-.274l6.034-6.033C978.386-438.167,978.484-438.245,978.609-438.353Z" transform="translate(-971.716 447.116)" fill="#000000" />
+                        </svg>
+                    </Modal.Header>
+                    <Modal.Content className='mh-400 overflow-y-auto text-center pt-2'>
+                        <div className="d-flex justify-content-center mb-2">
+                            <Image width='250' src="/assets/images/AAA-Check.png" alt='CreditScore' />
+                        </div>
+                        <>
+                            <div className="mb-3 error">
+                                Oops! The customer cannot complete the move-in with this credit score
+                            </div>
+                            <div className="">
+                                <button onClick={() => SetCreditScoreModal({ open: false })} className="ui button bg-danger-light fs-7 fw-400 text-white px-5 mr-1 mb-sm-1">Cancel Move-In</button>
+                                <button className="ui button bg-green fs-7 fw-400 text-white px-5 mb-sm-1">Contact Us</button>
+                            </div>
+                        </>
+
                     </Modal.Content>
                 </Modal>
             </div>

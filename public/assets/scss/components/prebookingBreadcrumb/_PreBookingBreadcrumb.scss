@@ -6,6 +6,9 @@
         .section{
             position: relative;
             padding-right: 3.5rem !important;
+            @include for-mobile{
+                padding-right: 0 !important;
+            }
             &::before{
                 content: "";
                 position: absolute;
@@ -14,6 +17,9 @@
                 height: 1px;
                 right: 0rem;
                 top: 1rem;
+                @include for-mobile{
+                    display: none;
+                }
             }
             &:last-child{
                 &::before{

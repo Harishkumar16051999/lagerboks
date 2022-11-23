@@ -6,7 +6,7 @@ body{
     font-size: 14px !important;
 }
 body.pushable{
-    background: #f9f9f9 !important;
+    background: #F3F4F8 !important;
 }
 p{
     line-height: 1.5 !important;
@@ -56,6 +56,9 @@ p{
 }
 .bg-success-dark{
     background-color: $primaryColor !important;
+}
+.bg-green{
+    background-color: $PaymentAlertBg !important;
 }
 .border-success-dark-1{
     border:1px solid $primaryColor !important;
