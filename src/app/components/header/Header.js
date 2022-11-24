@@ -8,7 +8,7 @@ export default function Header(props) {
     e.preventDefault();
     props.showSidebar(!props.sidebar)
   }
-  const friendOptions = [
+  const languageOptions = [
     {
       key: 'NORWEGIAN',
       text: 'NORWEGIAN',
@@ -26,7 +26,7 @@ export default function Header(props) {
     <>
       <div className={`position-fixed w-100 ${location.pathname.startsWith('/postBooking') && `${props.width < 980 && 'pb-5'}`}`} id='mainHeader'>
         <div className='ui secondary pointing menu py-1 bg-white d-block  w-100'>
-          <a href="/" className={`item d-inline-block p-sm-1 ${props.width < 981 && 'w-50'}`}>
+          <a href="/" className={`item d-inline-block p-1 p-sm-1 ml-5 ml-sm-1 ${props.width < 981 && 'w-50'}`}>
             <img className={`logo ${props.width > 980 && 'w-50'} ${props.width > 500 ? `${props.width < 980 && 'w-25'}` : `w-75`}`} src='/assets/images/logo_lagerboks.jpg' alt="Lagerboks" />
           </a>
           {
@@ -47,8 +47,8 @@ export default function Header(props) {
                     className="item fs-7 fw-700 mx-4 navtext py-3 d-inline-block"
                     inline
                     floating
-                    options={friendOptions}
-                    defaultValue={friendOptions[0].value}
+                    options={languageOptions}
+                    defaultValue={languageOptions[0].value}
                     icon={null}
                   />
                 </span>

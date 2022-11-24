@@ -1,0 +1,79 @@
+.loginform-wrapper{
+    .ui.container{
+        @include for-mobile{
+            margin: 0 !important;
+        }
+        .loginform-bgImg{
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .loginform-tab{
+            padding: 0 7rem;
+            @include for-mobile{
+                padding: 0 1rem;
+                top: 2rem !important;
+            }
+            .logintab-content{
+                h2{
+                    @include for-mobile{
+                        font-size: 1.5rem !important;
+                    }
+                }
+            }
+            .logintab-div{
+                .ui.secondary.pointing.menu{
+                    .item{
+                        width: 50%;
+                        justify-content: center;
+                        font-weight: 600;
+                        &:first-child{
+                            border-right: 2px solid $UnitsCardBg !important;
+                        }
+                    }
+                    .active.item{
+                        color: $primaryColor !important;
+                        border-bottom: 3px solid $primaryColor !important;
+                    }
+                }
+                .ui.form{
+                    .field{
+                        .ui.input{
+                            &::after{
+                                content: "";
+                                position: absolute;
+                                left: 2.5rem;
+                                background-color: $LoginFormBorderColor!important;
+                                height: 100%;
+                                width: 1px;
+                            }
+                            input{
+                                &::placeholder{
+                                    font-size: .9rem !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.ui.input.noCounterNumber{
+    justify-content: center;
+    &::after{
+        display: none;
+    }
+    .ui.dropdown{
+        @include for-mobile{
+            width: 40% !important;
+        }
+    } 
+    input{
+        @include for-mobile{
+            width: 60% !important;
+        }
+    }
+}

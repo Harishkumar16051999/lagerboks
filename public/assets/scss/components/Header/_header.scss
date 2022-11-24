@@ -31,7 +31,10 @@ span{
     }
 }
 .logo{
-    height: 2rem !important;
+    height: 3rem !important;
     width: 5rem !important;
     object-fit: contain !important;
+    @include for-mobile{
+        height: 2rem !important;
+    }
 }
