@@ -7,7 +7,7 @@ const UnitsCard = () => {
     const navigate = useNavigate();
     const tenantdetails = (e) => {
         e.preventDefault();
-        navigate('/TenantDetails')
+        navigate('/tenantDetails')
     }
     const [unitTypeModal, SetunitTypeModal] = useState({
         open: false,
@@ -85,18 +85,26 @@ const UnitsCard = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className='col-lg-3 col-md-6 col-sm-12'>
+                                <div className='col-lg-3 col-md-12 col-sm-12'>
                                     <div className='units-card-amt text-center px-3 py-3 px-md-2 py-md-2 py-sm-1'>
-                                        <div className='d-flex justify-content-center mb-1'>
-                                            <img src='/assets/images/discount-label.png' alt='Discount Label' />
-                                            <p className='text-dark fs-8 ml-1'>25% up to 4 Months</p>
+                                        <div className='row'>
+                                            <div className='col-lg-12 col-md-6 col-sm-6'>
+                                                <div className='d-flex justify-content-center mb-1'>
+                                                    <img src='/assets/images/discount-label.png' alt='Discount Label' />
+                                                    <p className='text-dark fs-8 ml-1'>25% up to 4 Months</p>
+                                                </div>
+                                            </div>
+                                            <div className='col-lg-12 col-md-6 col-sm-6'>
+                                                <div className='price-div'>
+                                                    <h3 className='text-primary fs-4 fw-600 mb-1'>NOK 650<small className='d-none'>/mo</small></h3>
+                                                    <span className='text-primary fs-8 d-inline-block mb-1'>per month</span>
+                                                    <p className='text-dark fs-8 fw-500'>Then NOK 575/month</p>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <h3 className='text-primary fs-4 fw-600 mb-1'>NOK 650</h3>
-                                        <span className='text-primary fs-8 d-inline-block mb-1'>per month</span>
-                                        <p className='text-dark fs-8 fw-500'>Then NOK 575/month</p>
                                     </div>
                                 </div>
-                                <div className='col-lg-3 col-md-6 col-sm-12'>
+                                <div className='col-lg-3 col-md-12 col-sm-12'>
                                     <div className='units-card-actions text-center px-1 py-3 px-md-2 py-md-2 py-sm-1'>
                                         <span className='error fs-8 fw-500 d-block mb-2 mb-sm-1'>Only 3 Units left</span>
                                         <button onClick={tenantdetails} class="ui button btn-success w-sm-100 d-inline-flex align-items-center border-radius-0">

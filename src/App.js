@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Routes, Route, useLocation } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Header from './app/components/header/Header';
 import Units from './app/pages/Units';
 import TenantDetails from "./app/pages/TenantDetails";
@@ -15,22 +15,21 @@ import LoginForm from "./app/pages/LoginForm";
 function App() {
   const windowWidth = window.innerWidth
   const [mobileWidth, SetmobileWidth] = useState();
-  const[sidebar,ShowSidebar]=useState(false)
-  const location = useLocation()
+  const [sidebar, ShowSidebar] = useState(false);
+  const location = useLocation();
   useEffect(() => {
       SetmobileWidth(windowWidth)
   }, [mobileWidth])
   return (
     <div>
-      
       <Header width={mobileWidth} sidebar={sidebar}  showSidebar={ShowSidebar} />
             {location.pathname.startsWith('/postBooking') && <SidebarPostBooking width={mobileWidth} sidebar={sidebar} showSidebar={ShowSidebar}/>}
                 <div className={` pusher  ${location.pathname.startsWith('/postBooking') && `${mobileWidth>980 ? 'pusher-desktop ':'pt-120'}`} `} id='mainContent'>      
                     <Routes>
-                        <Route exact path='/order' element={<Units />} />
-                        <Route path='/TenantDetails' element={<TenantDetails />} />
-                        <Route path='/SignandPayment' element={<SignandPayment />} />
-                        <Route path='/Login' element={<LoginForm />} />
+                        <Route exact path='/units' element={<Units />} />
+                        <Route path='/tenantDetails' element={<TenantDetails />} />
+                        <Route path='/signandPayment' element={<SignandPayment />} />
+                        <Route path='/login' element={<LoginForm />} />
 
                         <Route path='/postBooking/Profile' element={<Profile />} />
                         <Route path='/postBooking/myLeases' element={<MyLeases />} />

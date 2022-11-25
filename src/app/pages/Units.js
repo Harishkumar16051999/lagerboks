@@ -130,10 +130,10 @@ const Units = () => {
           </Modal.Header>
           <Modal.Content className='mh-400 overflow-y-auto'>
             <div className='row mb-3'>
-              <div className='col-lg-6'>
+              <div className='col-lg-6 col-md-6 col-sm-6'>
                 <p className='fw-600'>LARGE</p>
               </div>
-              <div className='col-lg-6 text-right'>
+              <div className='col-lg-6 col-md-6 col-sm-6 text-right'>
                 <p className='text-success-dark'><a href='/'>CLEAR ALL</a></p>
               </div>
             </div>

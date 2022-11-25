@@ -36,10 +36,10 @@ export default function Header(props) {
               <a href="https://www.lagerboks.no/" className="item fs-7 fw-700 mx-4 navtext py-3 d-inline-block">
                 HOME
               </a>
-              <NavLink to={'/order'} className="item fs-7 fw-700 mx-4 navtext py-3 d-inline-block">
+              <NavLink to={'/units'} className="item fs-7 fw-700 mx-4 navtext py-3 d-inline-block">
                 ORDER
               </NavLink>
-              <NavLink to={'/Login'} className="item fs-7 fw-700 mx-4 navtext py-3 d-inline-block">
+              <NavLink to={'/login'} className="item fs-7 fw-700 mx-4 navtext py-3 d-inline-block">
                 SIGNIN/PAYBILL
               </NavLink>
                 <span>
@@ -66,12 +66,12 @@ export default function Header(props) {
                       </a>
                     </Dropdown.Item>
                     <Dropdown.Item>
-                      <NavLink to={'/order'} className="item fs-7 fw-700 mx-4 navtext">
+                      <NavLink to={'/units'} className="item fs-7 fw-700 mx-4 navtext">
                         ORDER
                       </NavLink>
                     </Dropdown.Item>
                     <Dropdown.Item>
-                      <NavLink to={'/Login'} className="item fs-7 fw-700 mx-4 navtext">
+                      <NavLink to={'/login'} className="item fs-7 fw-700 mx-4 navtext">
                         SIGNIN/PAYBILL
                       </NavLink>
                     </Dropdown.Item>

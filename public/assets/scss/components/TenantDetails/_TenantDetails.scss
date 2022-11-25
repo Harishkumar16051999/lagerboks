@@ -1,0 +1,15 @@
+.tenantDetails-wrapper{
+    .tenantform-div{
+        @include for-mobile{
+            border-radius: 10px !important;
+            border: 1px solid $UnitsCardBg !important;
+        }
+    }
+    .ui.accordion{
+        .title{
+            @include for-mobile{
+                display: block !important;
+            }
+        }
+    }
+}

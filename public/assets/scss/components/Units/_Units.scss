@@ -60,7 +60,6 @@
                     }
                 }
                 .units-card-img{
-                    background-color: $UnitsCardBg;
                     border-radius: 10px 0 0 10px;
                     @include for-tablet{
                         border-radius: 10px 10px 0 0;
@@ -109,6 +108,26 @@
                         width: 1rem;
                         height: 1rem;
                         object-fit: contain;
+                    }
+                    .price-div{
+                        @include for-tablet{
+                            text-align: right;
+                        }
+                        h3{
+                            @include for-mobile{
+                                font-size: 1.2rem !important;
+                            }
+                            small{
+                                @include for-mobile{
+                                    display: inline-block !important;
+                                }
+                            }
+                        }
+                        span{
+                            @include for-mobile{
+                                display: none !important;
+                            }
+                        }
                     }
                 }
                 .units-card-actions{

@@ -17,7 +17,7 @@ export default class UnitsFilter extends Component {
         const { activeIndex } = this.state
 
         return (
-            <Accordion className='card-boxshadow'>
+            <Accordion className='card-boxshadow bg-white'>
                 <Accordion.Title
                     className='py-3 px-2 card-border-bottom fw-600'
                     active={activeIndex === 1}

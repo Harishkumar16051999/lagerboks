@@ -20,7 +20,7 @@ const SignandPayment = () => {
                     <div className='col-lg-8 col-md-8 col-sm-12'>
                         <div className='bg-white card-boxshadow py-4 px-3 px-sm-2'>
                             <h5 className='sub-title fs-6 fw-600 mb-2 d-inline-block mb-4'>RENTAL AGREEMENT</h5>
-                            <div className='bg-white card-boxshadow border-radius-15 mb-3'>
+                            <div className='bg-white card-boxShadow border-radius-15 mb-3'>
                                 <div className='p-3 px-sm-1'>
                                     <div className='card-bg-secondary w-100 px-2 py-2'>
                                         <iframe className='w-100' height="400" title='Documents' />
@@ -64,35 +64,25 @@ const SignandPayment = () => {
                                 </div>
                             </div>
                             {showbankdiv && 
-                            <div className='bg-white card-boxshadow border-radius-15'>
+                            <div className='bg-white showbankid-div card-boxShadow border-radius-15'>
                                 <div className='mt-1'>
-                                    <h5 className='fw-600 text-success-dark card-border-bottom text-center p-3'>SELECT E-SIGNATURE METHOD TO SIGN THE DOCUMENTS</h5>
+                                        <h5 className='fw-600 dashed-bottom text-center px-3 py-1'>
+                                            <div className='d-flex justify-content-center align-items-center'>
+                                                <img src="/assets/images/bankid.png" alt="Norwegian BankID" />
+                                                <p className='ml-1'>Sign with Norweigan BankID</p>
+                                            </div>
+                                        </h5>
                                     <div className='py-4 px-3'>
-                                        <div className='card-border bank-div flex-wrap border-radius-5 d-flex align-items-center position-relative mb-3'>
-                                            <div className='bank-img px-2 border-right'>
-                                                <img className='w-100 h-100' src="/assets/images/bankid.png" alt="Norwegian BankID" />
-                                            </div>
-                                            <div className='bank-title pl-3'>
-                                                <p>Norwegian BankID</p>
-                                            </div>
-                                            <img className='bankid-img position-absolute r-2' src="/assets/images/arrow-down.png" alt="Arrow" />
-                                        </div>
-                                        <div className='card-border bank-div flex-wrap border-radius-5 d-flex align-items-center position-relative'>
-                                            <div className='bank-img px-2 border-right'>
-                                                <img className='w-100 h-100' src="/assets/images/BankNorway.png" alt="Norwegian BankID" />
-                                            </div>
-                                            <div className='bank-title pl-3'>
-                                                <p>Norwegian BankID on Mobile</p>
-                                            </div>
-                                            <img className='bankid-img position-absolute r-2' src="/assets/images/arrow-down.png" alt="Arrow" />
-                                        </div>
+                                        <p>Karthick Ram, you will sign with a Norwegian BankID. Once you have signed, your signature will be registered by the e-signature service Signicat.</p>
+                                        <div className='text-center my-2'>
+                                            <button className='ui button bg-primary fs-7 text-white fw-400 px-4'>SIGN</button>
+                                         </div>   
                                     </div>
                                 </div>
                             </div>
                             }
                             <div className='pt-4 text-center'>
-                                <button onClick={() => navigate('/TenantDetails')} class="ui button bg-white border-success-dark-light-1 text-dark fs-7 fw-400 px-5 mx-1 mb-1 mb-sm-1 px-sm-2">BACK</button>
-                                <button class="ui button bg-success-dark text-white fs-7 fw-400 px-5 mx-1 mb-1 mb-sm-1 px-sm-3">NEXT</button>
+                                <button onClick={() => navigate('/tenantDetails')} class="ui button bg-white border-success-dark-light-1 text-dark fs-7 fw-400 px-5 mx-1 mb-1 mb-sm-1 px-sm-2">BACK</button>
                             </div>
                         </div>
                     </div>
