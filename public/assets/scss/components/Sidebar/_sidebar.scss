@@ -1,18 +1,55 @@
 #postBookingSidebar{
-    width: 170px !important;
+    width: 180px !important;
     z-index: 9999 !important;
+    background-color: $SidebarBg !important;
+    @include for-mobile{
+        position: fixed !important;
+        top: 0 !important;
+        width: 100% !important;
+    }
+    .profile-div{
+        .profile-name{
+            h2{
+                border-radius: 50%;
+                padding: 1.5rem;
+            }
+        }
+    }
+}
+#postBookingSidebar .item{
+    border-bottom: 1px solid #ffffff33 !important;
+    @include for-tablet{
+        &:nth-child(2){
+            border-bottom: 2px solid #ffffff33 !important;
+        }
+        &:first-child{
+            border-bottom: none !important;
+        }
+    }
 }
 #postBookingSidebar .active.item{
-    background: transparent !important;
-    color:$primaryColor !important;
-    svg{
-        g:not(.strokeSvg){
-            fill: $primaryColor !important;
-           
-         
+    background: $primaryColor !important;
+    color:$textLightColor !important;
+    border-bottom: 1px solid $primaryColor !important;
+    &:first-child{
+        background: transparent !important;
+        color:$textLightColor !important;
+        border-bottom: 2px solid $primaryColor !important;
+        @include for-mobile{
+            border-bottom: none !important;
         }
-        g.strokeSvg{
-            stroke:$primaryColor !important ;
+    }
+    @include for-tablet{
+        &:nth-child(2){
+            background: transparent !important;
+            color:$textLightColor !important;
+            border-bottom: 2px solid $primaryColor !important;
         }
+    }
+}
+
+.hamburger-menu{
+    @include for-mobile{
+        top: 4.6rem !important;
     }
 }

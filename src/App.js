@@ -13,31 +13,31 @@ import SignandPayment from "./app/pages/SignandPayment";
 import LoginForm from "./app/pages/LoginForm";
 
 function App() {
-  const windowWidth = window.innerWidth
+  const windowWidth = window.innerWidth;
   const [mobileWidth, SetmobileWidth] = useState();
   const [sidebar, ShowSidebar] = useState(false);
   const location = useLocation();
   useEffect(() => {
-      SetmobileWidth(windowWidth)
+    SetmobileWidth(windowWidth)
   }, [mobileWidth])
   return (
     <div>
-      <Header width={mobileWidth} sidebar={sidebar}  showSidebar={ShowSidebar} />
-            {location.pathname.startsWith('/postBooking') && <SidebarPostBooking width={mobileWidth} sidebar={sidebar} showSidebar={ShowSidebar}/>}
-                <div className={` pusher  ${location.pathname.startsWith('/postBooking') && `${mobileWidth>980 ? 'pusher-desktop ':'pt-120'}`} `} id='mainContent'>      
-                    <Routes>
-                        <Route exact path='/units' element={<Units />} />
-                        <Route path='/tenantDetails' element={<TenantDetails />} />
-                        <Route path='/signandPayment' element={<SignandPayment />} />
-                        <Route path='/login' element={<LoginForm />} />
+      <Header width={mobileWidth} sidebar={sidebar} showSidebar={ShowSidebar} />
+      {location.pathname.startsWith('/postBooking') && <SidebarPostBooking width={mobileWidth} sidebar={sidebar} showSidebar={ShowSidebar} />}
+      <div className={` pusher  ${location.pathname.startsWith('/postBooking') && `${mobileWidth > 980 ? 'pusher-desktop ' : 'pt-120'}`} `} id='mainContent'>
+        <Routes>
+          <Route exact path='/units' element={<Units />} />
+          <Route path='/tenantDetails' element={<TenantDetails />} />
+          <Route path='/signandPayment' element={<SignandPayment />} />
+          <Route path='/login' element={<LoginForm />} />
 
-                        <Route path='/postBooking/Profile' element={<Profile />} />
-                        <Route path='/postBooking/myLeases' element={<MyLeases />} />
-                        <Route path='/postBooking/myInvoices' element={<MYInvoices />} />
-                        <Route path='/postBooking/payment' element={<Payment />} />
-                        <Route path='/postBooking/updatePassword' element={<Updatepassword />} />
-                    </Routes>
-                </div>
+          <Route path='/postBooking/Profile' element={<Profile />} />
+          <Route path='/postBooking/myLeases' element={<MyLeases />} />
+          <Route path='/postBooking/myInvoices' element={<MYInvoices />} />
+          <Route path='/postBooking/payment' element={<Payment />} />
+          <Route path='/postBooking/updatePassword' element={<Updatepassword />} />
+        </Routes>
+      </div>
     </div>
   );
 }

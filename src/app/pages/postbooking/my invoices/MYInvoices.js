@@ -51,18 +51,18 @@ export default function MYInvoices() {
                 <g id="Group_7114" data-name="Group 7114" transform="translate(15182.979 1058)">
                   <g id="XMLID_39_" transform="translate(-15182.979 -1058)">
                     <g id="Group_7113" data-name="Group 7113" transform="translate(0.633 0.633)">
-                      <path id="Path_19728" data-name="Path 19728" d="M350.061,400,345,405.061V400Z" transform="translate(-327.286 -375.327)" fill="#328128" />
+                      <path id="Path_19728" data-name="Path 19728" d="M350.061,400,345,405.061V400Z" transform="translate(-327.286 -375.327)" fill="#00aeef" />
                       <path id="Path_19729" data-name="Path 19729" d="M87.775,10V34.673H82.714v5.061H65V10Z" transform="translate(-65 -10)" fill="none" />
                     </g>
-                    <path id="Path_19730" data-name="Path 19730" d="M79.041.633A.633.633,0,0,0,78.408,0H55.633A.633.633,0,0,0,55,.633V30.367a.633.633,0,0,0,.633.633H73.347a.633.633,0,0,0,.448-.185l5.061-5.061a.631.631,0,0,0,.184-.447h0ZM73.347,24.673a.633.633,0,0,0-.633.633v4.429H56.265V1.265h21.51V24.673Zm.633,4.167v-2.9h2.9Z" transform="translate(-55)" fill="#328128" />
+                    <path id="Path_19730" data-name="Path 19730" d="M79.041.633A.633.633,0,0,0,78.408,0H55.633A.633.633,0,0,0,55,.633V30.367a.633.633,0,0,0,.633.633H73.347a.633.633,0,0,0,.448-.185l5.061-5.061a.631.631,0,0,0,.184-.447h0ZM73.347,24.673a.633.633,0,0,0-.633.633v4.429H56.265V1.265h21.51V24.673Zm.633,4.167v-2.9h2.9Z" transform="translate(-55)" fill="#00aeef" />
                   </g>
-                  <rect id="Rectangle_5979" data-name="Rectangle 5979" width="6" height="1" transform="translate(-15179.979 -1054)" fill="#328128" />
-                  <rect id="Rectangle_5980" data-name="Rectangle 5980" width="8" height="1" transform="translate(-15179.979 -1053)" fill="#328128" />
-                  <path id="Path_19731" data-name="Path 19731" d="M126.449,125H110.633a.633.633,0,0,0-.633.633v18.031a.633.633,0,0,0,.633.633H122.02v-1.265h-6.01v-5.694h9.806v2.531h1.265V125.633A.633.633,0,0,0,126.449,125Zm-.633,3.48H116.01v-2.214h9.806Zm-9.806,1.265h9.806v2.531H116.01Zm-1.265-3.48v2.214h-3.48v-2.214Zm-3.48,16.765V129.745h3.48v13.286Zm4.745-6.959v-2.531h9.806v2.531Z" transform="translate(-15289.5 -1175.092)" fill="#328128" />
-                  <rect id="Rectangle_5981" data-name="Rectangle 5981" width="1" height="1" transform="translate(-15176.979 -1044)" fill="#328128" />
-                  <rect id="Rectangle_5982" data-name="Rectangle 5982" width="1" height="1" transform="translate(-15176.979 -1041)" fill="#328128" />
-                  <rect id="Rectangle_5983" data-name="Rectangle 5983" width="1" height="2" transform="translate(-15176.979 -1037)" fill="#328128" />
-                  <rect id="Rectangle_5984" data-name="Rectangle 5984" width="1" height="1" transform="translate(-15176.979 -1034)" fill="#328128" />
+                  <rect id="Rectangle_5979" data-name="Rectangle 5979" width="6" height="1" transform="translate(-15179.979 -1054)" fill="#00aeef" />
+                  <rect id="Rectangle_5980" data-name="Rectangle 5980" width="8" height="1" transform="translate(-15179.979 -1053)" fill="#00aeef" />
+                  <path id="Path_19731" data-name="Path 19731" d="M126.449,125H110.633a.633.633,0,0,0-.633.633v18.031a.633.633,0,0,0,.633.633H122.02v-1.265h-6.01v-5.694h9.806v2.531h1.265V125.633A.633.633,0,0,0,126.449,125Zm-.633,3.48H116.01v-2.214h9.806Zm-9.806,1.265h9.806v2.531H116.01Zm-1.265-3.48v2.214h-3.48v-2.214Zm-3.48,16.765V129.745h3.48v13.286Zm4.745-6.959v-2.531h9.806v2.531Z" transform="translate(-15289.5 -1175.092)" fill="#00aeef" />
+                  <rect id="Rectangle_5981" data-name="Rectangle 5981" width="1" height="1" transform="translate(-15176.979 -1044)" fill="#00aeef" />
+                  <rect id="Rectangle_5982" data-name="Rectangle 5982" width="1" height="1" transform="translate(-15176.979 -1041)" fill="#00aeef" />
+                  <rect id="Rectangle_5983" data-name="Rectangle 5983" width="1" height="2" transform="translate(-15176.979 -1037)" fill="#00aeef" />
+                  <rect id="Rectangle_5984" data-name="Rectangle 5984" width="1" height="1" transform="translate(-15176.979 -1034)" fill="#00aeef" />
                 </g>
               </svg>
                 <span className="veritical-align-text-top ml-1">Invoice</span></h6>

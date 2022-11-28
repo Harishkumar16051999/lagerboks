@@ -107,7 +107,7 @@ const UnitsCard = () => {
                                 <div className='col-lg-3 col-md-12 col-sm-12'>
                                     <div className='units-card-actions text-center px-1 py-3 px-md-2 py-md-2 py-sm-1'>
                                         <span className='error fs-8 fw-500 d-block mb-2 mb-sm-1'>Only 3 Units left</span>
-                                        <button onClick={tenantdetails} class="ui button btn-success w-sm-100 d-inline-flex align-items-center border-radius-0">
+                                        <button onClick={tenantdetails} className="ui button btn-success w-sm-100 d-inline-flex align-items-center border-radius-0">
                                             <img src="/assets/images/password-img.png" alt="Rent Now" /><span>Rent Now</span>
                                         </button>
                                     </div>

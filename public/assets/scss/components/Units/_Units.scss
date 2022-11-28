@@ -1,4 +1,5 @@
 .units-wrapper{
+    background-color: $textLightColor;
     .units-banner{
         img{
             height: 14rem;
@@ -22,6 +23,11 @@
     }
     .units-row-div{
         .filters-div{
+            .filter-wrapper{
+                @include for-mobile{
+                    display: none;
+                }
+            }
             .accordion{
                 border: 2px solid $primaryLightColor !important;
                 border-radius: 11px;
@@ -33,6 +39,25 @@
                             cursor: pointer;
                         }
                     }
+                }
+            }
+            .isMenu{
+                position: fixed;
+                height: 100vh;
+                top: 0;
+                left: 0 !important;
+                width: 100%;
+                padding: 7rem 0 0;
+                background-color: #fff;
+                z-index: 1;
+                display: block !important;
+                svg{
+                    top: -1.5rem !important;
+                }
+                .accordion{
+                    border: transparent !important;
+                    border-radius: 0px !important;
+                    box-shadow: none;
                 }
             }
         }
@@ -162,3 +187,5 @@
         }
     }
 }
+
+

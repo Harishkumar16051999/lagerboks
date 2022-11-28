@@ -82,7 +82,7 @@ const SignandPayment = () => {
                             </div>
                             }
                             <div className='pt-4 text-center'>
-                                <button onClick={() => navigate('/tenantDetails')} class="ui button bg-white border-success-dark-light-1 text-dark fs-7 fw-400 px-5 mx-1 mb-1 mb-sm-1 px-sm-2">BACK</button>
+                                <button onClick={() => navigate('/tenantDetails')} className="ui button bg-white border-success-dark-light-1 text-dark fs-7 fw-400 px-5 mx-1 mb-1 mb-sm-1 px-sm-2">BACK</button>
                             </div>
                         </div>
                     </div>

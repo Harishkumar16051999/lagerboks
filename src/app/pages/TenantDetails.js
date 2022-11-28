@@ -185,15 +185,15 @@ const TenantDetails = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div class="d-flex mb-4 justify-content-between flex-wrap bg-primary-light p-1 border-success-dark-1 border-radius-5">
-                                    <p class="d-flex align-items-center">
-                                        <img src="/assets/images/credit-score.svg" alt="Esign" /><span class="ml-1">Great! Your credit score has been checked successfully</span>
+                                <div className="d-flex mb-4 justify-content-between flex-wrap bg-primary-light p-1 border-success-dark-1 border-radius-5">
+                                    <p className="d-flex align-items-center">
+                                        <img src="/assets/images/credit-score.svg" alt="Esign" /><span className="ml-1">Great! Your credit score has been checked successfully</span>
                                     </p>
-                                    <button onClick={() => SetCreditScoreModal({ open: true, dimmer: 'blurring' })} class="ui button border-success-dark-1 text-success-dark p-1 bg-white fs-7 fw-400 text-dark px-2 px-sm-1 mr-2 mt-md-1">View Score</button>
+                                    <button onClick={() => SetCreditScoreModal({ open: true, dimmer: 'blurring' })} className="ui button border-success-dark-1 text-success-dark p-1 bg-white fs-7 fw-400 text-dark px-2 px-sm-1 mr-2 mt-md-1">View Score</button>
                                 </div>
-                                <div class="text-center my-2">
-                                    <button onClick={() => navigate('/order')} class="ui button bg-white border-success-dark-light-1 text-dark fs-7 fw-400 px-5 mx-1 mb-1 mb-sm-1 px-sm-2">BACK</button>
-                                    <button onClick={() => SetCreditCheckModal({ open: true, dimmer: 'blurring' })} class="ui button bg-success-dark text-white fs-7 fw-400 px-5 mx-1 mb-1 mb-sm-1 px-sm-3">NEXT</button>
+                                <div className="text-center my-2">
+                                    <button onClick={() => navigate('/order')} className="ui button bg-white border-success-dark-light-1 text-dark fs-7 fw-400 px-5 mx-1 mb-1 mb-sm-1 px-sm-2">BACK</button>
+                                    <button onClick={() => SetCreditCheckModal({ open: true, dimmer: 'blurring' })} className="ui button bg-success-dark text-white fs-7 fw-400 px-5 mx-1 mb-1 mb-sm-1 px-sm-3">NEXT</button>
                                 </div>
                             </div>}
                             {alreadyUser && <div className='tenantDetails-signin-wrapper'>

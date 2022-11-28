@@ -1,7 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Checkbox, Button } from 'semantic-ui-react';
 
 const SigninForm = (props) => {
+    const navigate = useNavigate()
+    const ValidateSignin=(e)=>{
+        e.preventDefault();
+        navigate('/postBooking/Profile')
+      }
     return (
         <div className='ui form py-2 px-4 px-sm-2'>
             <div className='field mb-3'>
@@ -34,7 +40,7 @@ const SigninForm = (props) => {
                     <Checkbox className='fs-8 mr-3 mb-sm-1' label='Remember me' />
                     <p className='fs-8 text-decoration-underline'><a href="/">Forget your password?</a></p>
                 </div>
-                <button className='ui button bg-primary text-white fw-400 fs-7 w-100 py-2'>Login</button>
+                <button onClick={ValidateSignin} className='ui button bg-primary text-white fw-400 fs-7 w-100 py-2'>Login</button>
                 <p className='fs-8 mt-3'>Don't have an account? <Button className='bg-transparent fs-8 fw-400 p-0 text-primary' onClick={props.onClick}
               value={props.value}>Signup Now</Button></p>
             </div>

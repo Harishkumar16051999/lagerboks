@@ -30,8 +30,7 @@ export default function Header(props) {
             <img className={`logo ${props.width > 980 && 'w-50'} ${props.width > 500 ? `${props.width < 980 && 'w-25'}` : `w-75`}`} src='/assets/images/logo_lagerboks.jpg' alt="Lagerboks" />
           </a>
           {
-            props.width > 980
-            &&
+            props.width > 980 &&
             <div className='right menu d-inline-block float-right'>
               <a href="https://www.lagerboks.no/" className="item fs-7 fw-700 mx-4 navtext py-3 d-inline-block">
                 HOME
@@ -78,7 +77,7 @@ export default function Header(props) {
                   </Dropdown.Menu>
                 </Dropdown>
               </Menu>
-              {location.pathname.startsWith('/postBooking') && <Icon className='position-fixed fs-4 l-2 t-9' onClick={(e) => openSidebar(e)} name='bars' />}
+              {location.pathname.startsWith('/postBooking') && <Icon className='position-fixed fs-4 l-2 t-11 hamburger-menu text-white' onClick={(e) => openSidebar(e)} name='bars' />}
             </div>
           }
         </div>
