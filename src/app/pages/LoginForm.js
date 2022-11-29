@@ -46,7 +46,7 @@ class LoginForm extends Component {
                 </div>}
                 </div>
                 <div className='col-lg-6 col-md-12 col-sm-12'>
-                  <div className='logintab-div bg-white border-radius-5 card-boxshadow'>
+                  <div className='logintab-div bg-white border-radius-5 card-boxShadow'>
                     <Tab menu={{ secondary: true, pointing: true }} panes={panes} activeIndex={activeIndex}
                       onTabChange={this.handleTabChange} />
                   </div>

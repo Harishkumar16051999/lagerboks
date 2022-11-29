@@ -1,185 +1,203 @@
 .units-wrapper{
     background-color: $textLightColor;
-    .units-banner{
-        img{
-            height: 14rem;
+    .ui.container{
+        @include for-mobile{
+            margin: 0 !important;
         }
-        .units-top-content{
-            width: 45%;
-            bottom: -2rem !important;
-            @include for-tablet{
-                width: 60%;
+        .units-banner{
+            img{
+                height: 14rem;
             }
-            @include for-mobile{
-                width: 90%;
-            }
-            .dropdown-div{
-                .ui.fluid.dropdown{
-                    width: 90% !important;
-                    margin: 0 auto;
+            .units-top-content{
+                width: 45%;
+                bottom: -2rem !important;
+                @include for-tablet{
+                    width: 60%;
                 }
-            }
-        }
-    }
-    .units-row-div{
-        .filters-div{
-            .filter-wrapper{
                 @include for-mobile{
-                    display: none;
+                    width: 90%;
                 }
-            }
-            .accordion{
-                border: 2px solid $primaryLightColor !important;
-                border-radius: 11px;
-                .content{
-                    background-color: $UnitsFilterBg !important;
-                    div{
-                        a{
-                            font-size: .7rem;
-                            cursor: pointer;
-                        }
+                .dropdown-div{
+                    .ui.fluid.dropdown{
+                        width: 90% !important;
+                        margin: 0 auto;
                     }
                 }
             }
-            .isMenu{
-                position: fixed;
-                height: 100vh;
-                top: 0;
-                left: 0 !important;
-                width: 100%;
-                padding: 7rem 0 0;
-                background-color: #fff;
-                z-index: 1;
-                display: block !important;
-                svg{
-                    top: -1.5rem !important;
+        }
+        .units-row-div{
+            .filters-div{
+                .filter-wrapper{
+                    @include for-mobile{
+                        position: fixed;
+                        left: -200%;
+                        top: 0;
+                        height: 100vh;
+                        width: 100%;
+                        padding: 7rem 0 0;
+                        background-color: #fff;
+                        z-index: 1;
+                        transition: all 0.5s ease;
+                    }
+                    svg{
+                        display: none;
+                        @include for-mobile{
+                            display: block;
+                            top: -1.5rem !important;
+                        }
+                    }
                 }
                 .accordion{
-                    border: transparent !important;
-                    border-radius: 0px !important;
-                    box-shadow: none;
-                }
-            }
-        }
-        .units-container-div{
-            .sort-div{
-                h4{
-                    .dropdown{
-                        .menu{
-                            left: auto;
-                            right: 0;
-                            border-radius: 0 !important;
-                        }
-                        .divider{
-                            font-size: 1rem;
-                            font-weight: 400 !important;
-                            padding-left: 0.4rem;
-                        }
-                    }
-                }
-            }
-            .units-card{
-                .row{
-                    @include for-desktop{
-                        align-items: unset !important;
-                    }
-                }
-                .units-card-img{
-                    border-radius: 10px 0 0 10px;
-                    @include for-tablet{
-                        border-radius: 10px 10px 0 0;
-                    }
-                }
-                .view-img{
-                    img{
-                        width: 1rem;
-                        height: 1rem;
-                    }
-                }
-                .units-card-desc{
-                    .units-amenitiy{
-                        div{
-                            background-color: $lightGray;
-                            padding: 0.4rem 0.5rem;
-                            margin: 0.5rem 0.5rem 0 0;
-                        }
-                    }
-                }
-                .units-card-amt{
-                    position: relative;
-                    @include for-tablet{
-                        text-align: left !important;
-                    }
+                    border: 2px solid $primaryLightColor !important;
+                    border-radius: 11px;
                     @include for-mobile{
-                        text-align: left !important;
+                        border: transparent !important;
+                        border-radius: 0px !important;
+                        box-shadow: none;
                     }
-                    div{
-                        @include for-mobile{
-                            justify-content: start !important;
-                        }
-                    }
-                    &:before {
-                        content: "";
-                        position: absolute;
-                        left: 0;
-                        height: 6rem;
-                        width: 1px;
-                        background-color: $UnitsCardBg;
-                        @include for-tablet{
-                            display: none;
-                        }
-                    }
-                    img{
-                        width: 1rem;
-                        height: 1rem;
-                        object-fit: contain;
-                    }
-                    .price-div{
-                        @include for-tablet{
-                            text-align: right;
-                        }
-                        h3{
-                            @include for-mobile{
-                                font-size: 1.2rem !important;
-                            }
-                            small{
-                                @include for-mobile{
-                                    display: inline-block !important;
-                                }
-                            }
-                        }
-                        span{
-                            @include for-mobile{
-                                display: none !important;
+                    .content{
+                        background-color: $UnitsFilterBg !important;
+                        div{
+                            a{
+                                font-size: .7rem;
+                                cursor: pointer;
                             }
                         }
                     }
                 }
-                .units-card-actions{
-                    button{
-                        padding: 0.5rem 1rem !important;
-                        @include for-mobile{
-                            justify-content: center !important;
+                .filter-wrapper.isMenu{
+                    left: 0 !important;
+                    transition: all 0.5s ease;
+
+                }
+            }
+            .units-container-div{
+                .sort-div{
+                    h4{
+                        .dropdown{
+                            .menu{
+                                left: auto;
+                                right: 0;
+                                border-radius: 0 !important;
+                            }
+                            .divider{
+                                font-size: 1rem;
+                                font-weight: 400 !important;
+                                padding-left: 0.4rem;
+                            }
                         }
+                    }
+                }
+                .units-card{
+                    .row{
+                        @include for-desktop{
+                            align-items: unset !important;
+                        }
+                    }
+                    .units-card-img{
+                        border-radius: 10px 0 0 10px;
+                        @include for-tablet{
+                            border-radius: 10px 10px 0 0;
+                        }
+                        img{
+                            @include for-mobile{
+                                width: 12rem !important;
+                                height: 12rem !important;
+                                object-fit: contain;
+                            }
+                        }
+                    }
+                    .view-img{
                         img{
                             width: 1rem;
                             height: 1rem;
                         }
-                        span{
-                            font-size: .9rem !important;
-                            margin-left: 0.4rem;
-                            font-weight: 400;
+                    }
+                    .units-card-desc{
+                        .units-amenitiy{
+                            div{
+                                background-color: $lightGray;
+                                padding: 0.4rem 0.5rem;
+                                margin: 0.5rem 0.5rem 0 0;
+                            }
                         }
                     }
-                }
-                .more-info{
-                    .accordion{
-                        margin-top: -1.8rem;
+                    .units-card-amt{
+                        position: relative;
                         @include for-tablet{
-                            margin-top: 0rem;
+                            text-align: left !important;
                         }
-                        .content{
-                            border-top: 1px solid $UnitsCardBg;
+                        @include for-mobile{
+                            text-align: left !important;
+                        }
+                        div{
+                            @include for-mobile{
+                                justify-content: start !important;
+                            }
+                        }
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            height: 6rem;
+                            width: 1px;
+                            background-color: $UnitsCardBg;
+                            @include for-tablet{
+                                display: none;
+                            }
+                        }
+                        img{
+                            width: 1rem;
+                            height: 1rem;
+                            object-fit: contain;
+                        }
+                        .price-div{
+                            @include for-tablet{
+                                text-align: right;
+                            }
+                            h3{
+                                @include for-mobile{
+                                    font-size: 1.2rem !important;
+                                }
+                                small{
+                                    @include for-mobile{
+                                        display: inline-block !important;
+                                    }
+                                }
+                            }
+                            span{
+                                @include for-mobile{
+                                    display: none !important;
+                                }
+                            }
+                        }
+                    }
+                    .units-card-actions{
+                        button{
+                            padding: 0.5rem 1rem !important;
+                            @include for-mobile{
+                                justify-content: center !important;
+                            }
+                            img{
+                                width: 1rem;
+                                height: 1rem;
+                            }
+                            span{
+                                font-size: .9rem !important;
+                                margin-left: 0.4rem;
+                                font-weight: 400;
+                            }
+                        }
+                    }
+                    .more-info{
+                        .accordion{
+                            margin-top: -1.8rem;
+                            @include for-tablet{
+                                margin-top: 0rem;
+                            }
+                            .content{
+                                border-top: 1px solid $UnitsCardBg;
+                            }
                         }
                     }
                 }

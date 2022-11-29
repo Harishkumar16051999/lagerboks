@@ -6,14 +6,17 @@ body{
     font-size: 14px !important;
 }
 body.pushable{
-    background: #F3F4F8 !important;
+    background: $textLightColor !important;
 }
 p{
     line-height: 1.5 !important;
 }
 #mainContent{
-    background: #F3F4F8 !important;
-    padding-top: 100px;
+    background: $textLightColor !important;
+    padding-top: 82px;
+    @include for-mobile{
+        padding-top: 65px !important;
+    }
 }
 .pusher-desktop{
     transform:unset !important;
@@ -133,6 +136,9 @@ p{
 // Flex properties
 .justify-content-center{
     justify-content: center !important;
+}
+.justify-content-around{
+    justify-content: space-around !important;
 }
 .justify-content-between{
     justify-content: space-between !important;

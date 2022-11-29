@@ -3,11 +3,11 @@ import UpdatePasswordForm from "../../../components/updatepasswordform/UpdatePas
 
 export default function Updatepassword() {
   return (
-    <div className="mx-2 mx-sm-1">
+    <div className="mx-2 mx-sm-1 wrapper my-2">
       <div>
         <div className="bg-white card-boxShadow border-radius-15 mb-2">
           <div className="row dashed-bottom px-4 py-2 px-sm-2">
-            <div className="col-lg-6 col-md-6 col-sm-6">
+            <div className="col-lg-12 col-md-12 col-sm-12">
               <h6 className="fs-6 fw-500"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 18.646 27.078">
                 <g id="password-svgrepo-com" transform="translate(-31.62)">
                   <path id="Path_19671" data-name="Path 19671" d="M47.933,9.764h-.441V6.548a6.549,6.549,0,0,0-13.1,0V9.764h-.441A2.336,2.336,0,0,0,31.62,12.1V24.744a2.336,2.336,0,0,0,2.333,2.333h13.98a2.336,2.336,0,0,0,2.333-2.333V12.1A2.336,2.336,0,0,0,47.933,9.764ZM36.394,6.548a4.549,4.549,0,0,1,9.1,0V9.764h-9.1Zm11.872,18.2a.338.338,0,0,1-.333.333H33.953a.338.338,0,0,1-.333-.333V12.1a.338.338,0,0,1,.333-.333h13.98a.338.338,0,0,1,.333.333Z" transform="translate(0)" fill="#00aeef" />

@@ -78,7 +78,7 @@ export default class UnitsFilter extends Component {
                             <li className='mb-2'><input className='mr-1' type="checkbox" />10x8x8</li>
                             <li><input className='mr-1' type="checkbox" />10x9x9</li>
                         </ul>
-                        <a href="javascript:void(0);" className='text-success text-right d-block' onClick={this.props.modal}>MORE</a>
+                        <a className='text-success text-right d-block' onClick={this.props.modal}>MORE</a>
                     </div>
                 </Accordion.Content>
 
@@ -117,7 +117,7 @@ export default class UnitsFilter extends Component {
                             <li className='mb-2'><input className='mr-1' type="checkbox" />10x8x8</li>
                             <li><input className='mr-1' type="checkbox" />10x9x9</li>
                         </ul>
-                        <a href="javascript:void(0);" className='text-success text-right d-block' onClick={this.props.modal}>MORE</a>
+                        <a className='text-success text-right d-block' onClick={this.props.modal}>MORE</a>
                     </div>
                 </Accordion.Content>
             </Accordion>

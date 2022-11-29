@@ -17,10 +17,10 @@ const UnitsCard = () => {
     return (
         <>
             <div className='col-lg-12 col-md-6 col-sm-12'>
-                <div className='units-card bg-white card-border border-radius-10 mx-2 mb-2 mx-sm-1'>
+                <div className='units-card bg-white card-border border-radius-10 mx-2 mb-2 mx-sm-2'>
                     <div className='row align-items-center'>
                         <div className='col-lg-3 col-md-12 col-sm-12 position-relative'>
-                            <div className='units-card-img h-100 px-2 py-2'>
+                            <div className='units-card-img h-100 text-center px-2 py-2'>
                                 <img className='w-100 h-100' src='/assets/images/units-card-img.png' alt='Units Container' />
                             </div>
                             <div className='view-img position-absolute t-1 l-1'>

@@ -1,14 +1,25 @@
 .signandpayment-wrapper{
-    .card-img{
-        img{
-            border-radius: 10px;
+    .ui.container{
+        @include for-mobile{
+            margin: 0 !important;
         }
-    }
-    .showbankid-div{
-        img{
-            width: 5rem !important;
-            height: 2.5rem !important;
-            object-fit: contain !important;
+        .card-img{
+            img{
+                border-radius: 10px;
+            }
+        }
+        .showbankid-div{
+            img{
+                width: 5rem !important;
+                height: 2.5rem !important;
+                object-fit: contain !important;
+            }
+        }
+        .accordUnits{
+            background-color: $mainBg !important;
+            @include for-mobile{
+                background-color: $textLightColor !important;
+            }
         }
     }
 }

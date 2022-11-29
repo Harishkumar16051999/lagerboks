@@ -41,7 +41,7 @@ export default function MYInvoices() {
   }, [checked]);
 
   return (
-    <div className="mx-2 mx-sm-1">
+    <div className="mx-2 mx-sm-1 wrapper my-2">
       <div>
         <p className="fs-6 fw-500 text-success-dark ml-1 mb-2">14 Records Selected</p>
         <div className="bg-white card-boxShadow border-radius-15 py-1 mb-2">

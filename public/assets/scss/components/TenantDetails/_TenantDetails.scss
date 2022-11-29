@@ -1,14 +1,29 @@
 .tenantDetails-wrapper{
-    .tenantform-div{
+    .ui.container{
         @include for-mobile{
-            border-radius: 10px !important;
-            border: 1px solid $UnitsCardBg !important;
+            margin: 0 !important;
         }
-    }
-    .ui.accordion{
-        .title{
+        .tenantform-div{
             @include for-mobile{
-                display: block !important;
+                border-radius: 10px !important;
+                border: 1px solid $UnitsCardBg !important;
+            }
+        }
+        .accordTenant{
+            background-color: $mainBg !important;
+            @include for-mobile{
+                background-color: transparent !important;
+            }
+            .ui.accordion{
+                @include for-mobile{
+                    background-color: $textLightColor !important;
+                    border: 1px solid $UnitsCardBg !important;
+                }
+                .title{
+                    @include for-mobile{
+                        display: block !important;
+                    }
+                }
             }
         }
     }

@@ -38,3 +38,18 @@ span{
         height: 2rem !important;
     }
 }
+#mainHeader{
+    .ui.menu{
+        border: 0 !important; 
+        box-shadow: none !important;
+        .menu-dropdown{
+            .divider.text{
+                font-size: .7rem !important;
+                font-weight: 700;
+            }
+        }
+    }
+    .language-switcher{
+        width: 11rem;
+    }
+}

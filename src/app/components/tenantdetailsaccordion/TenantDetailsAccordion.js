@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Accordion, Icon } from 'semantic-ui-react'
+import { Accordion } from 'semantic-ui-react'
 
 export default class TenantDetailsAccordion extends Component {
     state = { activeIndex: 0 }
@@ -16,7 +16,7 @@ export default class TenantDetailsAccordion extends Component {
         const { activeIndex } = this.state
 
         return (
-            <Accordion className='card-border bg-white overflow-hidden border-radius-10 mx-2 my-2 mx-sm-0'>
+            <Accordion className='bg-transparent overflow-hidden border-radius-10 mx-2 my-2 mx-sm-2'>
                 <Accordion.Title
                     className='fs-7 fw-600 bg-white py-2 px-2 card-border-bottom d-none'
                     active={activeIndex === 0}
@@ -30,9 +30,9 @@ export default class TenantDetailsAccordion extends Component {
                 </Accordion.Title>
                 <Accordion.Content active={activeIndex === 0}>
                     <div className='px-0 py-2'>
-                        <h6 className='text-dark fw-600 fs-6 px-4 mb-1 px-sm-2'>TOTAL AMOUNT</h6>
-                        <p className='px-4 mb-2 px-sm-2 fw-400 text-light-gray'>Please see the breakdown below</p>
-                        <div className='px-4 px-md-2 px-sm-1'>
+                        <h6 className='text-dark fw-600 fs-6 px-2 mb-1 px-sm-2'>TOTAL AMOUNT</h6>
+                        <p className='px-2 mb-2 px-sm-2 fw-400 text-light-gray'>Please see the breakdown below</p>
+                        <div className='px-2 px-md-2 px-sm-1'>
                             <div className="py-2 card-border-top">
                                 <div className="content">
                                     <div className='mb-2 d-flex justify-content-between text-light-gray fw-500 px-1'>

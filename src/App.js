@@ -11,6 +11,9 @@ import Payment from './app/pages/postbooking/payment/Payment';
 import Updatepassword from './app/pages/postbooking/update password/Updatepassword';
 import SignandPayment from "./app/pages/SignandPayment";
 import LoginForm from "./app/pages/LoginForm";
+import ViewDocuments from "./app/pages/ViewDocuments";
+import DocumentsExpired from "./app/pages/DocumentExpired";
+import SuccessfulMoveIn from "./app/pages/SuccessfulMoveIn";
 
 function App() {
   const windowWidth = window.innerWidth;
@@ -30,6 +33,9 @@ function App() {
           <Route path='/tenantDetails' element={<TenantDetails />} />
           <Route path='/signandPayment' element={<SignandPayment />} />
           <Route path='/login' element={<LoginForm />} />
+          <Route path='/viewDocuments' element={<ViewDocuments />} />
+          <Route path='/linkExpired' element={<DocumentsExpired />} />
+          <Route path='/successfulMovein' element={<SuccessfulMoveIn />} />
 
           <Route path='/postBooking/Profile' element={<Profile />} />
           <Route path='/postBooking/myLeases' element={<MyLeases />} />

@@ -176,3 +176,8 @@ input[type=checkbox] {
         right: -5rem;
     }
 }
+.wrapper{
+    @include for-mobile{
+        margin-top: 4rem !important;
+    }
+}
