@@ -10,9 +10,11 @@
         }
         .showbankid-div{
             img{
-                width: 5rem !important;
                 height: 2.5rem !important;
                 object-fit: contain !important;
+                @include for-mobile{
+                    width: 5rem !important;
+                }
             }
         }
         .accordUnits{

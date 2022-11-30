@@ -1,12 +1,12 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { Checkbox, Button } from 'semantic-ui-react';
 
 const SigninForm = (props) => {
     const navigate = useNavigate()
     const ValidateSignin=(e)=>{
         e.preventDefault();
-        navigate('/postBooking/Profile')
+        navigate('/lease/Profile')
       }
     return (
         <div className='ui form py-2 px-4 px-sm-2'>
@@ -38,7 +38,7 @@ const SigninForm = (props) => {
             <div className='text-center'>
                 <div className="remember-div d-flex justify-content-between mb-3 flex-wrap">
                     <Checkbox className='fs-8 mr-3 mb-sm-1' label='Remember me' />
-                    <p className='fs-8 text-decoration-underline'><a href="/">Forget your password?</a></p>
+                    <p className='fs-8 text-decoration-underline'><Link to="/forgotPassword">Forget your password?</Link></p>
                 </div>
                 <button onClick={ValidateSignin} className='ui button bg-primary text-white fw-400 fs-7 w-100 py-2'>Login</button>
                 <p className='fs-8 mt-3'>Don't have an account? <Button className='bg-transparent fs-8 fw-400 p-0 text-primary' onClick={props.onClick}

@@ -14,6 +14,7 @@ import LoginForm from "./app/pages/LoginForm";
 import ViewDocuments from "./app/pages/ViewDocuments";
 import DocumentsExpired from "./app/pages/DocumentExpired";
 import SuccessfulMoveIn from "./app/pages/SuccessfulMoveIn";
+import ForgotPassword from "./app/pages/ForgotPassword";
 
 function App() {
   const windowWidth = window.innerWidth;
@@ -26,22 +27,23 @@ function App() {
   return (
     <div>
       <Header width={mobileWidth} sidebar={sidebar} showSidebar={ShowSidebar} />
-      {location.pathname.startsWith('/postBooking') && <SidebarPostBooking width={mobileWidth} sidebar={sidebar} showSidebar={ShowSidebar} />}
-      <div className={` pusher  ${location.pathname.startsWith('/postBooking') && `${mobileWidth > 980 ? 'pusher-desktop ' : 'pt-120'}`} `} id='mainContent'>
+      {location.pathname.startsWith('/lease') && <SidebarPostBooking width={mobileWidth} sidebar={sidebar} showSidebar={ShowSidebar} />}
+      <div className={` pusher  ${location.pathname.startsWith('/lease') && `${mobileWidth > 980 ? 'pusher-desktop ' : 'pt-120'}`} `} id='mainContent'>
         <Routes>
           <Route exact path='/units' element={<Units />} />
           <Route path='/tenantDetails' element={<TenantDetails />} />
           <Route path='/signandPayment' element={<SignandPayment />} />
           <Route path='/login' element={<LoginForm />} />
+          <Route path='/forgotPassword' element={<ForgotPassword />} />
           <Route path='/viewDocuments' element={<ViewDocuments />} />
           <Route path='/linkExpired' element={<DocumentsExpired />} />
           <Route path='/successfulMovein' element={<SuccessfulMoveIn />} />
 
-          <Route path='/postBooking/Profile' element={<Profile />} />
-          <Route path='/postBooking/myLeases' element={<MyLeases />} />
-          <Route path='/postBooking/myInvoices' element={<MYInvoices />} />
-          <Route path='/postBooking/payment' element={<Payment />} />
-          <Route path='/postBooking/updatePassword' element={<Updatepassword />} />
+          <Route path='/lease/Profile' element={<Profile />} />
+          <Route path='/lease/myLeases' element={<MyLeases />} />
+          <Route path='/lease/myInvoices' element={<MYInvoices />} />
+          <Route path='/lease/payment' element={<Payment />} />
+          <Route path='/lease/updatePassword' element={<Updatepassword />} />
         </Routes>
       </div>
     </div>

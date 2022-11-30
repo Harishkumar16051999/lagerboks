@@ -24,7 +24,7 @@ export default function Header(props) {
   ]
   return (
     <>
-      <div className={`position-fixed card-boxShadow w-100 ${location.pathname.startsWith('/postBooking') && `${props.width < 980 && 'pb-5'}`}`} id='mainHeader'>
+      <div className={`position-fixed card-boxShadow w-100 ${location.pathname.startsWith('/lease') && `${props.width < 980 && 'pb-5'}`}`} id='mainHeader'>
         <div className='ui secondary pointing menu py-1 bg-white d-block  w-100'>
           <a href="/" className={`item d-inline-block p-1 p-sm-1 ml-5 ml-sm-1 ${props.width < 981 && 'w-50'}`}>
             <img className={`logo ${props.width > 980 && 'w-50'} ${props.width > 500 ? `${props.width < 980 && 'w-25'}` : `w-75`}`} src='/assets/images/logo_lagerboks.jpg' alt="Lagerboks" />
@@ -55,11 +55,10 @@ export default function Header(props) {
           }
           {
             props.width < 980 &&
-            <div className='d-inline-block float-right pr-3 p-sm-1'>
-              <Menu className='min-h-100 logo-menu' compact>
-                <Dropdown className='fs-8 menu-dropdown' text='Menu' simple item direction='left'>
+            <div className='d-inline-block w-100 text-right float-right pr-3 p-sm-1'>
+                <Dropdown text='Menu' className='menu-dropdown' direction='left'>
                   <Dropdown.Menu>
-                    <Dropdown.Item>
+                  <Dropdown.Item>
                       <a href="https://www.lagerboks.no/" className="item fs-7 fw-700 mx-4 navtext">
                         HOME
                       </a>
@@ -76,8 +75,7 @@ export default function Header(props) {
                     </Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>
-              </Menu>
-              {location.pathname.startsWith('/postBooking') && <Icon className='position-fixed fs-4 l-2 t-11 hamburger-menu text-white' onClick={(e) => openSidebar(e)} name='bars' />}
+              {location.pathname.startsWith('/lease') && <Icon className='position-fixed fs-4 l-2 t-11 hamburger-menu text-white' onClick={(e) => openSidebar(e)} name='bars' />}
             </div>
           }
         </div>

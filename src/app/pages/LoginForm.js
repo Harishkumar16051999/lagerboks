@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Button, Tab } from "semantic-ui-react";
 import SignupForm from '../components/signupform/SignupForm';
 import SigninForm from '../components/signinform/SigninForm';
-class LoginForm extends Component {
+export default class LoginForm extends Component {
   state = { activeIndex: 0 };
 
   handleRangeChange = e => this.setState({ activeIndex: e.target.value });
@@ -59,5 +59,3 @@ class LoginForm extends Component {
     );
   }
 }
-
-export default LoginForm;

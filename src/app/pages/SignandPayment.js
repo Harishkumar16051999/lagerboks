@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { Checkbox } from 'semantic-ui-react';
 import PreBookingBreadcrumb from '../components/prebooking breadcrumb/PreBookingBreadcrumb';
@@ -50,36 +50,36 @@ const SignandPayment = () => {
                                         </div>
                                     </div>
                                     <div className='pt-1'>
-                                            <div className='mt-2 mb-3'>
-                                                <Checkbox onClick={bankDivshowHanlder} className='fs-7 mr-3' label='I have read and understood the contents of the documents listed and I am ready to sign' />
-                                            </div>
-                                            <div className='d-flex justify-content-between flex-wrap bg-primary-light p-1 border-success-dark-1 border-radius-5'>
-                                                <p className='d-flex align-items-center'><img src='/assets/images/esign.svg' alt='Esign' /><span className='ml-1'>Great! You have successfully signed the documents</span></p>
-                                                <button onClick={() => navigate('/viewDocuments')} className="ui button text-success-dark bg-white border-success-dark-1 fs-7 fw-400 text-dark px-2 px-sm-1 mr-2 mt-md-1">View Document</button>
-                                            </div>
-                                            <div className='pt-4 d-flex justify-content-center flex-wrap'>
-                                                <button onClick={() => navigate('/linkExpired')} className="ui button bg-success-dark d-flex align-items-center border-radius-5 fs-6 fw-100 text-white px-5 px-md-2 mb-sm-1"><img src='/assets/images/executed-payment.svg' alt='Pay Now' /><span className='ml-1 fs-6 fw-400'>Pay Now</span></button>
-                                            </div>
+                                        <div className='mt-2 mb-3'>
+                                            <Checkbox onClick={bankDivshowHanlder} className='fs-7 mr-3' label='I have read and understood the contents of the documents listed and I am ready to sign' />
                                         </div>
+                                        <div className='d-flex justify-content-between flex-wrap bg-primary-light p-1 border-success-dark-1 border-radius-5'>
+                                            <p className='d-flex align-items-center'><img src='/assets/images/esign.svg' alt='Esign' /><span className='ml-1'>Great! You have successfully signed the documents</span></p>
+                                            <button onClick={() => navigate('/viewDocuments')} className="ui button text-success-dark bg-white border-success-dark-1 fs-7 fw-400 text-dark px-2 px-sm-1 mr-2 mt-md-1">View Document</button>
+                                        </div>
+                                        <div className='pt-4 d-flex justify-content-center flex-wrap'>
+                                            <button onClick={() => navigate('/linkExpired')} className="ui button bg-success-dark d-flex align-items-center border-radius-5 fs-6 fw-100 text-white px-5 px-md-2 mb-sm-1"><img src='/assets/images/executed-payment.svg' alt='Pay Now' /><span className='ml-1 fs-6 fw-400'>Pay Now</span></button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            {showbankdiv && 
-                            <div className='bg-white showbankid-div card-boxShadow border-radius-15'>
-                                <div className='mt-1'>
+                            {showbankdiv &&
+                                <div className='bg-white showbankid-div card-boxShadow border-radius-15'>
+                                    <div className='mt-1'>
                                         <h5 className='fw-600 dashed-bottom text-center px-3 py-1'>
                                             <div className='d-flex justify-content-center align-items-center'>
                                                 <img src="/assets/images/bankid.png" alt="Norwegian BankID" />
                                                 <p className='ml-1'>Sign with Norweigan BankID</p>
                                             </div>
                                         </h5>
-                                    <div className='py-4 px-3'>
-                                        <p>Karthick Ram, you will sign with a Norwegian BankID. Once you have signed, your signature will be registered by the e-signature service Signicat.</p>
-                                        <div className='text-center my-2'>
-                                            <button onClick={() => navigate('/successfulMovein')} className='ui button bg-primary fs-7 text-white fw-400 px-4'>SIGN</button>
-                                         </div>   
+                                        <div className='py-4 px-3'>
+                                            <p>Karthick Ram, you will sign with a Norwegian BankID. Once you have signed, your signature will be registered by the e-signature service Signicat.</p>
+                                            <div className='text-center my-2'>
+                                                <button onClick={() => navigate('/successfulMovein')} className='ui button bg-primary fs-7 text-white fw-400 px-4'>SIGN</button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
                             }
                             <div className='pt-4 text-center'>
                                 <button onClick={() => navigate('/tenantDetails')} className="ui button bg-white border-success-dark-light-1 text-dark fs-7 fw-400 px-5 mx-1 mb-1 mb-sm-1 px-sm-2">BACK</button>
@@ -89,7 +89,7 @@ const SignandPayment = () => {
                     <div className='col-lg-4 col-md-4 col-sm-12 accordUnits'>
                         <div className='mx-2 my-3 mx-sm-0'>
                             <div className='card-border mb-3 bg-white border-radius-10 mx-sm-2'>
-                            <UnitsDetailsAccordion />
+                                <UnitsDetailsAccordion />
                             </div>
                             <div className='bg-white card-boxShadow px-0 py-2 mx-sm-2 border-radius-10 border-top-success-4'>
                                 <div className='row date-div'>

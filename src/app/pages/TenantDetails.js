@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import PreBookingBreadcrumb from "../components/prebooking breadcrumb/PreBookingBreadcrumb"
 import { Dropdown, Checkbox, Input, Modal, Image, Button } from 'semantic-ui-react';
 import SemanticDatepicker from 'react-semantic-ui-datepickers';
@@ -192,7 +192,7 @@ const TenantDetails = () => {
                                     <button onClick={() => SetCreditScoreModal({ open: true, dimmer: 'blurring' })} className="ui button border-success-dark-1 text-success-dark p-1 bg-white fs-7 fw-400 text-dark px-2 px-sm-1 mr-2 mt-md-1">View Score</button>
                                 </div>
                                 <div className="text-center my-2">
-                                    <button onClick={() => navigate('/order')} className="ui button bg-white border-success-dark-light-1 text-dark fs-7 fw-400 px-5 mx-1 mb-1 mb-sm-1 px-sm-2">BACK</button>
+                                    <button onClick={() => navigate('/units')} className="ui button bg-white border-success-dark-light-1 text-dark fs-7 fw-400 px-5 mx-1 mb-1 mb-sm-1 px-sm-2">BACK</button>
                                     <button onClick={() => SetCreditCheckModal({ open: true, dimmer: 'blurring' })} className="ui button bg-success-dark text-white fs-7 fw-400 px-5 mx-1 mb-1 mb-sm-1 px-sm-3">NEXT</button>
                                 </div>
                             </div>
@@ -233,7 +233,7 @@ const TenantDetails = () => {
                         <div className='text-center'>
                             <div className="remember-div d-flex justify-content-between mb-3 flex-wrap">
                                 <Checkbox className='fs-8 mr-3 mb-sm-1' label='Remember me' />
-                                <p className='fs-8 text-decoration-underline'><a href="/">Forget your password?</a></p>
+                                <p className='fs-8 text-decoration-underline'><Link to="/forgotPassword">Forget your password?</Link></p>
                             </div>
                             <button onClick={() => setAlreadyUser(false)} className='ui button bg-primary text-white fw-400 fs-7 w-100 py-2'>Sign-In</button>
                             <p className='fs-8 mt-3'>Don't have an account? <Button onClick={() => navigate('/login')} className='bg-transparent fs-8 fw-400 p-0 text-primary'

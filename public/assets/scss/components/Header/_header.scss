@@ -42,10 +42,15 @@ span{
     .ui.menu{
         border: 0 !important; 
         box-shadow: none !important;
+        @include for-tablet{
+            display: flex !important;
+            justify-content: space-between;
+            align-items: center;
+        }
         .menu-dropdown{
             .divider.text{
-                font-size: .7rem !important;
-                font-weight: 700;
+                font-size: .9rem !important;
+                font-weight: 500;
             }
         }
     }
